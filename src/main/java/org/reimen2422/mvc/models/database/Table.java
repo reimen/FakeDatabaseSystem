@@ -1,7 +1,7 @@
 package org.reimen2422.mvc.models.database;
 
+import org.reimen2422.mvc.models.modelclass.TableModelInterface;
 import org.reimen2422.mvc.models.modelclass.TableObjectInterface;
-import org.reimen2422.mvc.models.modelclass.User;
 import org.reimen2422.mvc.utils.Path;
 
 import java.io.File;
@@ -13,16 +13,18 @@ import java.util.List;
 import java.util.Scanner;
 
 public abstract class Table {
-    private String name;
-    private Path path;
-    private Database database;
-    private File file;
+    protected String name;
+    protected Path path;
+    protected Database database;
+    protected File file;
+    protected TableModelInterface tableModelInterface;
 
-    public Table(String table, Database database) {
-        this.name = table;
+    public Table(Database database, TableModelInterface tableModelInterface) {
+        this.name = tableModelInterface.getTableName();
         this.database = database;
-        path = new Path(database.getPath() + table + ".dat");
+        path = new Path(database.getPath() + name + ".dat");
         file = new File(path.toString());
+        this.tableModelInterface = tableModelInterface;
     }
 
     public String getName() {
@@ -48,13 +50,13 @@ public abstract class Table {
 
         try {
             FileWriter fw = new FileWriter(file, true);
-            if(!file.exists()) {
+            if (!file.exists()) {
                 create();
             }
             fw.write(data.toData() + "\n");
             fw.close();
             return true;
-        } catch(IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
             return false;
         }
@@ -86,27 +88,25 @@ public abstract class Table {
 
     public List<TableObjectInterface> selectAll() {
         List<TableObjectInterface> tableObjectList = new ArrayList<TableObjectInterface>();
-        try{
+        try {
             Scanner scanner = new Scanner(file);
             scanner.useDelimiter("\n");
-            while(scanner.hasNext()) {
-                TableObjectInterface tableObject = serialize(scanner.next());
-                if(tableObject != null) {
+            while (scanner.hasNext()) {
+                TableObjectInterface tableObject = tableModelInterface.serializeModel(scanner.next());
+                if (tableObject != null) {
                     tableObjectList.add(tableObject);
                 }
             }
-        } catch(FileNotFoundException e){
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
         return tableObjectList;
     }
 
-    public abstract TableObjectInterface serialize(String string);
-
     public TableObjectInterface selectById(int id) {
         List<TableObjectInterface> tableObjectList = selectAll();
         for (TableObjectInterface tableObject : tableObjectList) {
-            if(tableObject.getId() == id) {
+            if (tableObject.getId() == id) {
                 return tableObject;
             }
         }
