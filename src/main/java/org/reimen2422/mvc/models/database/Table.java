@@ -1,6 +1,6 @@
 package org.reimen2422.mvc.models.database;
 
-import org.reimen2422.mvc.models.modelclass.TableModelInterface;
+import org.reimen2422.mvc.models.modelclass.TableObjectInterface$;
 import org.reimen2422.mvc.models.modelclass.TableObjectInterface;
 import org.reimen2422.mvc.utils.Path;
 
@@ -17,14 +17,14 @@ public abstract class Table<T extends TableObjectInterface> {
     protected Path path;
     protected Database database;
     protected File file;
-    protected TableModelInterface<T> tableModelInterface;
+    protected TableObjectInterface$<T> tableObjectInterface$;
 
-    public Table(Database database, TableModelInterface<T> tableModelInterface) {
-        this.name = tableModelInterface.getTableName();
+    public Table(Database database, TableObjectInterface$<T> tableObjectInterface$) {
+        this.name = tableObjectInterface$.getTableName();
         this.database = database;
         path = new Path(database.getPath() + name + ".dat");
         file = new File(path.toString());
-        this.tableModelInterface = tableModelInterface;
+        this.tableObjectInterface$ = tableObjectInterface$;
     }
 
     public String getName() {
@@ -92,7 +92,7 @@ public abstract class Table<T extends TableObjectInterface> {
             Scanner scanner = new Scanner(file);
             scanner.useDelimiter("\n");
             while (scanner.hasNext()) {
-                T tableObject = tableModelInterface.serializeModel(scanner.next());
+                T tableObject = tableObjectInterface$.serializeModel(scanner.next());
                 if (tableObject != null) {
                     tableObjectList.add(tableObject);
                 }
@@ -111,6 +111,25 @@ public abstract class Table<T extends TableObjectInterface> {
             }
         }
         return null;
+    }
+
+    public boolean deleteById(int id) {
+        T targetObject = selectById(id);
+        if(targetObject == null) return false;
+
+        List<T> tableObjectList = selectAll();
+        try {
+            delete();
+            for(T tableObject : tableObjectList) {
+                if(tableObject.getId() != id) {
+                    insert(tableObject);
+                }
+            }
+            return true;
+        } catch(IOException e) {
+            e.printStackTrace();
+            return false;
+        }
     }
 
     public boolean delete() throws IOException {

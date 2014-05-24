@@ -27,4 +27,16 @@ public class UserTable extends Table<User> {
 
         return resultList;
     }
+
+    public int deleteByName(String name) {
+        List<User> targetUserList = selectByName(name);
+        if(targetUserList.size() == 0) return 0;
+
+        for(User user : targetUserList) {
+            if(user.getName().equals(name)) {
+                deleteById(user.getId());
+            }
+        }
+        return targetUserList.size();
+    }
 }
