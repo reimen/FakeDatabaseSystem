@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f715e72c-917f-44c5-be6d-2e2926dcb2d3" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/reimen2422/mvc/models/modelclass/tableModelInterface.java" afterPath="$PROJECT_DIR$/src/main/java/org/reimen2422/mvc/models/modelclass/TableObjectInterface$.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/reimen2422/mvc/models/database/Table.java" afterPath="$PROJECT_DIR$/src/main/java/org/reimen2422/mvc/models/database/Table.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/reimen2422/mvc/models/modelclass/User$.java" afterPath="$PROJECT_DIR$/src/main/java/org/reimen2422/mvc/models/modelclass/User$.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/reimen2422/mvc/models/database/UserTable.java" afterPath="$PROJECT_DIR$/src/main/java/org/reimen2422/mvc/models/database/UserTable.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/org/reimen2422/mvc/models/database/UserTableTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/reimen2422/mvc/models/database/UserTableTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/org/reimen2422/mvc/models/modelclass/User$Test.java" afterPath="$PROJECT_DIR$/src/test/java/org/reimen2422/mvc/models/modelclass/User$Test.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/reimen2422/mvc/models/modelclass/User.java" afterPath="$PROJECT_DIR$/src/main/java/org/reimen2422/mvc/models/modelclass/User.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/org/reimen2422/mvc/models/modelclass/UserTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/reimen2422/mvc/models/modelclass/UserTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MVC2.iws" />
@@ -93,26 +92,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="UserTable.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/reimen2422/mvc/models/database/UserTable.java">
+      <file leaf-file-name="User.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/reimen2422/mvc/models/modelclass/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="118" max-vertical-offset="615">
-              <caret line="39" column="37" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
+            <state vertical-scroll-proportion="0.51391864" vertical-offset="0" max-vertical-offset="480">
+              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserTableTest.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/org/reimen2422/mvc/models/database/UserTableTest.java">
+      <file leaf-file-name="UserTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/org/reimen2422/mvc/models/modelclass/UserTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8394004" vertical-offset="3493" max-vertical-offset="4065">
-              <caret line="273" column="0" selection-start-line="273" selection-start-column="0" selection-end-line="273" selection-end-column="0" />
-              <folding>
-                <element signature="e#5122#5128#0" expanded="true" />
-                <element signature="e#5373#5379#0" expanded="true" />
-                <element signature="e#8565#8571#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.0" vertical-offset="438" max-vertical-offset="870">
+              <caret line="55" column="5" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -120,11 +115,31 @@
       <file leaf-file-name="Table.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/reimen2422/mvc/models/database/Table.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1390" max-vertical-offset="2070">
-              <caret line="128" column="32" selection-start-line="128" selection-start-column="32" selection-end-line="128" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="645" max-vertical-offset="1530">
+              <caret line="53" column="46" selection-start-line="53" selection-start-column="46" selection-end-line="53" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User$.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/reimen2422/mvc/models/modelclass/User$.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="615">
+              <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User$Test.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/org/reimen2422/mvc/models/modelclass/User$Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="705">
+              <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -386,12 +401,15 @@
         <option value="$PROJECT_DIR$/src/main/java/org/reimen2422/mvc/models/modelclass/tableModelInterface.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/reimen2422/mvc/models/modelclass/User$.java" />
         <option value="$PROJECT_DIR$/src/test/java/org/reimen2422/mvc/models/database/TableTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/org/reimen2422/mvc/models/modelclass/User$Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/reimen2422/mvc/models/modelclass/TableModelInterface.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/reimen2422/mvc/models/modelclass/TableObjectInterface$.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/reimen2422/mvc/models/database/Table.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/reimen2422/mvc/models/database/UserTable.java" />
         <option value="$PROJECT_DIR$/src/test/java/org/reimen2422/mvc/models/database/UserTableTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/reimen2422/mvc/models/modelclass/UserChild.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/reimen2422/mvc/models/database/Table.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/reimen2422/mvc/models/modelclass/User.java" />
+        <option value="$PROJECT_DIR$/src/test/java/org/reimen2422/mvc/models/modelclass/UserTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/org/reimen2422/mvc/models/modelclass/User$Test.java" />
       </list>
     </option>
   </component>
@@ -1047,7 +1065,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329148" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29346314" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29346314" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962447" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962447" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1404,14 +1422,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/reimen2422/mvc/models/modelclass/UserTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="744" max-vertical-offset="1200">
-          <caret line="72" column="5" selection-start-line="72" selection-start-column="5" selection-end-line="72" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/user.dat">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="394">
@@ -1437,45 +1447,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/reimen2422/mvc/models/modelclass/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="167" max-vertical-offset="930">
-          <caret line="27" column="50" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/reimen2422/mvc/models/modelclass/User$Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/reimen2422/mvc/models/modelclass/User$.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="615">
-          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/reimen2422/mvc/models/modelclass/TableObjectInterface$.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
           <caret line="5" column="38" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/reimen2422/mvc/models/database/Table.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1390" max-vertical-offset="2070">
-          <caret line="128" column="32" selection-start-line="128" selection-start-column="32" selection-end-line="128" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1489,13 +1465,55 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/org/reimen2422/mvc/models/database/UserTableTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8394004" vertical-offset="3493" max-vertical-offset="4065">
-          <caret line="273" column="0" selection-start-line="273" selection-start-column="0" selection-end-line="273" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="3493" max-vertical-offset="4065">
+          <caret line="267" column="23" selection-start-line="267" selection-start-column="23" selection-end-line="267" selection-end-column="23" />
           <folding>
             <element signature="e#5122#5128#0" expanded="true" />
             <element signature="e#5373#5379#0" expanded="true" />
             <element signature="e#8565#8571#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/reimen2422/mvc/models/modelclass/UserTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="438" max-vertical-offset="870">
+          <caret line="55" column="5" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/reimen2422/mvc/models/modelclass/User$Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="705">
+          <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/reimen2422/mvc/models/modelclass/User$.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="615">
+          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/reimen2422/mvc/models/database/Table.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="645" max-vertical-offset="1530">
+          <caret line="53" column="46" selection-start-line="53" selection-start-column="46" selection-end-line="53" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/reimen2422/mvc/models/modelclass/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.51391864" vertical-offset="0" max-vertical-offset="480">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -55,21 +55,4 @@ public class UserTest {
         assertThat(actual, is(expected));
     }
 
-    @Test
-    public void testSerialize() throws Exception {
-        // SetUp and Exercise
-        User user1 = User.serialize("1 hayashi");
-        User user2 = new User(1, "hayashi");
-        // Verify
-        assertThat(user1, is(user2));
-    }
-
-    @Test
-    public void testSerializeRusultIsNull() throws Exception {
-        // SetUp and Exercise
-        User user1 = User.serialize("noNumber hayashi");
-        // Verify
-        assertThat(user1, nullValue());
-    }
-
 }

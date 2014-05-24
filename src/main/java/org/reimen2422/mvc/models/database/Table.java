@@ -36,18 +36,6 @@ public abstract class Table<T extends TableObjectInterface> {
     }
 
     public boolean insert(T data) throws IOException {
-//        if (file.exists()) {
-//            try {
-//                FileWriter fw = new FileWriter(file, true);
-//                fw.write(data.toData() + "\n");
-//                fw.close();
-//                return true;
-//            } catch(IOException e) {
-//                return false;
-//            }
-//        }
-//        return false;
-
         try {
             FileWriter fw = new FileWriter(file, true);
             if (!file.exists()) {
@@ -61,30 +49,6 @@ public abstract class Table<T extends TableObjectInterface> {
             return false;
         }
     }
-
-//    public List<User> selectAll() {
-////        List list = new ArrayList();
-////        このコードはユーザに依存してしまっている
-////        解決策の１つはListの型でインターフェースを指定する
-////        ただしUser.serializeはどうしても依存してしまう
-////        そこでこのクラスをabstractクラスとして定義し、
-////        UserTableやAdminTableで必要なメソッドを定義する
-//        List<User> userList = new ArrayList<User>();
-//        try{
-//            Scanner scanner = new Scanner(file);
-//            scanner.useDelimiter("\n");
-//            while(scanner.hasNext()) {
-////                list.add(User.serialize(scanner.next()));
-//                User user = User.serialize(scanner.next());
-//                if(user != null) {
-//                    userList.add(user);
-//                }
-//            }
-//        } catch(FileNotFoundException e){
-//            e.printStackTrace();
-//        }
-//        return userList;
-//    }
 
     public List<T> selectAll() {
         List<T> tableObjectList = new ArrayList<T>();
