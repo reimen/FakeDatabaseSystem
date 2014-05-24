@@ -3,9 +3,9 @@ package org.reimen2422.mvc.models.modelclass;
 /**
  * Created by hayashi on 2014/05/24.
  */
-public interface TableModelInterface {
+public interface TableModelInterface<T> {
 
-    TableObjectInterface serializeModel(String data);
+    T serializeModel(String data);
 
     String getTableName();
 }

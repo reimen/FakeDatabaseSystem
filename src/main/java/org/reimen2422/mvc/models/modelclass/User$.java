@@ -3,7 +3,7 @@ package org.reimen2422.mvc.models.modelclass;
 /**
  * Created by hayashi on 2014/05/24.
  */
-public class User$ implements TableModelInterface {
+public class User$ implements TableModelInterface<User> {
     private static User$ instance = null;
 
     public static User$ getInstance() {

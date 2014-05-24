@@ -12,14 +12,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public abstract class Table {
+public abstract class Table<T extends TableObjectInterface> {
     protected String name;
     protected Path path;
     protected Database database;
     protected File file;
-    protected TableModelInterface tableModelInterface;
+    protected TableModelInterface<T> tableModelInterface;
 
-    public Table(Database database, TableModelInterface tableModelInterface) {
+    public Table(Database database, TableModelInterface<T> tableModelInterface) {
         this.name = tableModelInterface.getTableName();
         this.database = database;
         path = new Path(database.getPath() + name + ".dat");
@@ -35,7 +35,7 @@ public abstract class Table {
         return file.createNewFile();
     }
 
-    public boolean insert(TableObjectInterface data) throws IOException {
+    public boolean insert(T data) throws IOException {
 //        if (file.exists()) {
 //            try {
 //                FileWriter fw = new FileWriter(file, true);
@@ -86,13 +86,13 @@ public abstract class Table {
 //        return userList;
 //    }
 
-    public List<TableObjectInterface> selectAll() {
-        List<TableObjectInterface> tableObjectList = new ArrayList<TableObjectInterface>();
+    public List<T> selectAll() {
+        List<T> tableObjectList = new ArrayList<T>();
         try {
             Scanner scanner = new Scanner(file);
             scanner.useDelimiter("\n");
             while (scanner.hasNext()) {
-                TableObjectInterface tableObject = tableModelInterface.serializeModel(scanner.next());
+                T tableObject = tableModelInterface.serializeModel(scanner.next());
                 if (tableObject != null) {
                     tableObjectList.add(tableObject);
                 }
@@ -103,9 +103,9 @@ public abstract class Table {
         return tableObjectList;
     }
 
-    public TableObjectInterface selectById(int id) {
-        List<TableObjectInterface> tableObjectList = selectAll();
-        for (TableObjectInterface tableObject : tableObjectList) {
+    public T selectById(int id) {
+        List<T> tableObjectList = selectAll();
+        for (T tableObject : tableObjectList) {
             if (tableObject.getId() == id) {
                 return tableObject;
             }

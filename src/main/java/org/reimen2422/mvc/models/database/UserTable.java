@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * Created by hayashi on 2014/05/22.
  */
-public class UserTable extends Table {
+public class UserTable extends Table<User> {
 
     public UserTable(Database database) {
         super(database, User$.getInstance());
