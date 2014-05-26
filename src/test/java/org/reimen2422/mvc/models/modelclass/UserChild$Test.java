@@ -6,13 +6,13 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.nullValue;
 import static org.junit.Assert.*;
 
-public class User$Test {
+public class UserChild$Test {
 
     @Test
     public void testGetInstance() throws Exception {
         // SetUp and Exercise
-        User$ actual = User$.getInstance();
-        User$ expected = User$.getInstance();
+        UserChild$ actual = UserChild$.getInstance();
+        UserChild$ expected = UserChild$.getInstance();
 
         // Verify
         assertThat(actual, is(expected));
@@ -21,18 +21,18 @@ public class User$Test {
     @Test
     public void testSerializeModel() throws Exception {
         // SetUp and Exercise
-        User user1 = User$.getInstance().serializeModel("1 hayashi");
-        User user2 = new User(1, "hayashi");
+        UserChild userChild1 = UserChild$.getInstance().serializeModel("1 hayashi");
+        UserChild userChild2 = new UserChild(1, "hayashi");
         // Verify
-        assertThat(user1, is(user2));
+        assertThat(userChild1, is(userChild2));
     }
 
     @Test
     public void testSerializeResultIsNull() throws Exception {
         // SetUp and Exercise
-        User user1 = User$.getInstance().serializeModel("noNumber hayashi");
+        UserChild userChild1 = UserChild$.getInstance().serializeModel("noNumber hayashi");
         // Verify
-        assertThat(user1, nullValue());
+        assertThat(userChild1, nullValue());
     }
 
     @Test
@@ -43,5 +43,4 @@ public class User$Test {
         // Verify
         assertThat(actual, is("user"));
     }
-
 }

@@ -29,14 +29,14 @@ public class UserTable extends Table<User> {
     }
 
     public int deleteByName(String name) {
-        List<User> targetUserList = selectByName(name);
-        if(targetUserList.size() == 0) return 0;
+        List<User> targetList = selectByName(name);
+        if(targetList.size() == 0) return 0;
 
-        for(User user : targetUserList) {
+        for(User user : targetList) {
             if(user.getName().equals(name)) {
                 deleteById(user.getId());
             }
         }
-        return targetUserList.size();
+        return targetList.size();
     }
 }
