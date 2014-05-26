@@ -7,9 +7,6 @@ import org.reimen2422.mvc.models.modelclass.User$;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by hayashi on 2014/05/22.
- */
 public class UserTable extends Table<User> {
 
     public UserTable(Database database) {
