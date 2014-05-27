@@ -2,9 +2,6 @@ package org.reimen2422.mvc.models.database.schemamodels.usertype;
 
 import org.reimen2422.mvc.models.database.schemamodels.SchemaModelInterface$;
 
-/**
- * Created by hayashi on 2014/05/25.
- */
 public class UserChild$ implements SchemaModelInterface$<UserChild> {
     private static UserChild$ instance = null;
 

@@ -26,18 +26,7 @@ public abstract class UserType implements SchemaModelInterface {
     }
 
     public String toString() {
-        // 本当は最初にthisが隠れている
-        // getClass()でクラスを返してくれる
-        // getName()でフルパスを取得できる
-        // getSimpleName()でフルパスの最後尾（クラス名）を取得できる
         return getClass().getSimpleName() + "(id=" + id + ", name=" + name + ")";
     }
-
-//    ここでこの定義をしてもUserとUserChildを比較したときtrueを返されてしまう
-//    genericsをうまく使えば解決できるかもしれない
-//    @Override
-//    public boolean equals(Object object) {
-//        return object instanceof UserType && id == ((UserType) object).getId();
-//    }
 
 }

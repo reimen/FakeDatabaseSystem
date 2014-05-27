@@ -7,7 +7,6 @@ import java.io.IOException;
 
 public class Database {
 
-//    private String databasePath;
     private Path path;
     private File database;
 
@@ -18,23 +17,12 @@ public class Database {
 
     public void use() throws IOException {
         if(!database.exists()) {
-//            if (!database.mkdir()) {
-//                throw new IOException("Failed to create database.");
-//            }
             boolean isMaking = database.mkdir();
             if(!isMaking) {
                 throw new IOException("Try create Database but it's failed...");
             }
         }
     }
-
-//    public void delete() throws IOException {
-//        if(database.exists()) {
-//            if (!database.delete()) {
-//                throw new IOException("Failed to delete database.");
-//            }
-//        }
-//    }
 
     public boolean delete() {
         return database.delete();
