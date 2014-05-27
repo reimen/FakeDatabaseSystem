@@ -5,9 +5,6 @@ import org.reimen2422.mvc.utils.Path;
 import java.io.File;
 import java.io.IOException;
 
-/**
- * Created by hayashi on 2014/05/22.
- */
 public class Database {
 
 //    private String databasePath;
