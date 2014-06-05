@@ -4,11 +4,21 @@ import org.junit.Test;
 import org.reimen2422.mvc.models.database.schemamodels.usertype.User;
 import org.reimen2422.mvc.models.database.schemamodels.usertype.UserChild;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
 
 public class UserChildTest {
 
+    /**
+     * UserChild
+     */
+
+    /**
+     * UserType
+     */
     @Test
     public void testGetId() throws Exception {
         // SetUp
@@ -32,7 +42,9 @@ public class UserChildTest {
     @Test
     public void testGetName() throws Exception {
         // SetUp and Exercise
-        String actual = new User(1, "reimen2422").getName();
+        List<UserChild> children = new ArrayList<UserChild>();
+        children.add(new UserChild(1, "child"));
+        String actual = new User(1, "reimen2422", children).getName();
         String expected = "reimen2422";
         // Verify
         assertThat(actual, is(expected));

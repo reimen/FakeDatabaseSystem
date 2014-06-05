@@ -17,7 +17,11 @@ import static org.hamcrest.MatcherAssert.assertThat;
 public class UserChildTableTest {
 
     /**
-     *  UserChildTable
+     *  UserTypeTable
+     */
+
+    /**
+     *  UserTypeTable
      */
     @Test
     public void testSelectByName() throws Exception {

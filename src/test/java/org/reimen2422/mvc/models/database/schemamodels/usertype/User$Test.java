@@ -4,6 +4,9 @@ import org.junit.Test;
 import org.reimen2422.mvc.models.database.schemamodels.usertype.User;
 import org.reimen2422.mvc.models.database.schemamodels.usertype.User$;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.nullValue;
 import static org.junit.Assert.*;
@@ -23,8 +26,10 @@ public class User$Test {
     @Test
     public void testSerializeModel() throws Exception {
         // SetUp and Exercise
-        User user1 = User$.getInstance().serializeModel("1 hayashi");
-        User user2 = new User(1, "hayashi");
+        List<UserChild> children = new ArrayList<UserChild>();
+        children.add(new UserChild(1, "child"));
+        User user1 = User$.getInstance().serializeModel("1 hayashi 1");
+        User user2 = new User(1, "hayashi", children);
         // Verify
         assertThat(user1, is(user2));
     }
