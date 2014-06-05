@@ -61,9 +61,7 @@ public class UserTableTest {
             database.use();
 //            Table table = new Table("user", database);
             UserTable table = new UserTable(database);
-            List<UserChild> children = new ArrayList<UserChild>();
-            children.add(new UserChild(1, "child"));
-            User user = new User(1, "hayashi", children);
+            User user = new User(1, "hayashi");
             // Exercise
             boolean actual = table.insert(user);
             // Verify
@@ -75,35 +73,15 @@ public class UserTableTest {
 
     @Test
     public void testSelectAll() throws Exception {
-//        // SetUp
-//        Database database = new Database(new Path(DatabaseConfig.PROJECT_PATH));
-//        try {
-//            database.use();
-//            Table table = new Table("user", database);
-//            List expected = new ArrayList();
-//            expected.add(new User(1, "hayashi"));
-//            // Exercise
-//            List actual = table.selectAll();
-//            // Verify
-//            assertThat(actual, is(expected));
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-
         // SetUp
         Database database = new Database(new Path(DatabaseConfig.PROJECT_PATH));
         try {
             database.use();
-//            Table table = new Table("user", database);
             UserTable userTable = new UserTable(database);
             userTable.delete();
-            List<UserChild> children = new ArrayList<UserChild>();
-            children.add(new UserChild(1, "child1"));
-            children.add(new UserChild(2, "child2"));
-            children.add(new UserChild(3, "child3"));
-            User user1 = new User(1, "hayashi1", children);
-            User user2 = new User(2, "hayashi2", children);
-            User user3 = new User(3, "hayashi3", children);
+            User user1 = new User(1, "hayashi1");
+            User user2 = new User(2, "hayashi2");
+            User user3 = new User(3, "hayashi3");
             List<User> expected = new ArrayList<User>();
             expected.add(user1);
             expected.add(user2);
@@ -130,13 +108,9 @@ public class UserTableTest {
 //            Table table = new Table("user", database);
             UserTable userTable = new UserTable(database);
             userTable.delete();
-            List<UserChild> children = new ArrayList<UserChild>();
-            children.add(new UserChild(1, "child1"));
-            children.add(new UserChild(2, "child2"));
-            children.add(new UserChild(3, "child3"));
-            User user1 = new User(1, "hayashi1", children);
-            User expected = new User(2, "hayashi2", children);
-            User user2 = new User(3, "hayashi3", children);
+            User user1 = new User(1, "hayashi1");
+            User expected = new User(2, "hayashi2");
+            User user2 = new User(3, "hayashi3");
             List<User> userList = new ArrayList<User>();
             userList.add(user1);
             userList.add(expected);
@@ -162,13 +136,9 @@ public class UserTableTest {
             database.use();
             UserTable userTable = new UserTable(database);
             userTable.delete();
-            List<UserChild> children = new ArrayList<UserChild>();
-            children.add(new UserChild(1, "child1"));
-            children.add(new UserChild(2, "child2"));
-            children.add(new UserChild(3, "child3"));
-            User user1 = new User(1, "hayashi1", children);
-            User user2 = new User(2, "hayashi2", children);
-            User user3 = new User(3, "hayashi3", children);
+            User user1 = new User(1, "hayashi1");
+            User user2 = new User(2, "hayashi2");
+            User user3 = new User(3, "hayashi3");
             List<User> userList = new ArrayList<User>();
             userList.add(user1);
             userList.add(user2);
@@ -270,13 +240,9 @@ public class UserTableTest {
             database.use();
             UserTable userTable = new UserTable(database);
             userTable.delete();
-            List<UserChild> children = new ArrayList<UserChild>();
-            children.add(new UserChild(1, "child1"));
-            children.add(new UserChild(2, "child2"));
-            children.add(new UserChild(3, "child3"));
-            User user1 = new User(1, "hayashi", children);
-            User user2 = new User(2, "hayashi", children);
-            User user3 = new User(3, "tatsuhiko", children);
+            User user1 = new User(1, "hayashi");
+            User user2 = new User(2, "hayashi");
+            User user3 = new User(3, "tatsuhiko");
             List<User> userList = new ArrayList<User>();
             userList.add(user1);
             userList.add(user2);

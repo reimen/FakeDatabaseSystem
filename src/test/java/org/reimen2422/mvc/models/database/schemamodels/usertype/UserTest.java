@@ -78,7 +78,7 @@ public class UserTest {
         children.add(new UserChild(1, "child"));
         children.add(new UserChild(2, "child2"));
         String actual = new User(1, "reimen2422", children).toData();
-        String expected = "1 reimen2422 1,2";
+        String expected = "1 reimen2422 1 2";
         // Verify
         assertThat(actual, is(expected));
     }

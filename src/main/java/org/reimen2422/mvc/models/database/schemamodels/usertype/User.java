@@ -4,12 +4,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class User extends UserType {
-    protected List<UserChild> children;
+    protected List<UserChild> children = new ArrayList<UserChild>();
 
 //    public User(int id, String name) {
 //        super(id, name);
 //        this.children = new ArrayList<UserChild>();
 //    }
+
+    public User(int id, String name) {
+        super(id, name);
+    }
 
     public User(int id, String name, List<UserChild> children) {
         super(id, name);
@@ -18,12 +22,18 @@ public class User extends UserType {
 
     @Override
     public String toData() {
-        String childrenString = "";
-        for(int i = 0; i < children.size(); i++) {
-            if(i != 0) childrenString = childrenString + ",";
-            childrenString = childrenString + children.get(i).getId();
+        StringBuilder data = new StringBuilder(id + " " + name);
+        if (children.size() != 0) {
+            data.append(" ");
         }
-        return id + " " + name + " " + childrenString;
+        for (int i = 0; i < children.size(); i++) {
+            if (i == (children.size() - 1)) {
+                data.append(children.get(i).getId());
+            } else {
+                data.append(children.get(i).getId()).append(" ");
+            }
+        }
+        return data.toString();
     }
 
     @Override

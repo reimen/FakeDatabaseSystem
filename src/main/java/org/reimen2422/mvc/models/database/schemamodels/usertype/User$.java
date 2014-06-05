@@ -24,25 +24,28 @@ public class User$ implements SchemaModelInterface$<User> {
     public User serializeModel(String data) {
         try {
             String[] dataArray = data.split(" ");
-            if(dataArray.length == 3) {
+            Database db = new Database(new Path(DatabaseConfig.PROJECT_PATH));
+
+            if (dataArray.length >= 2) {
                 int id = new Integer(dataArray[0]);
                 String name = dataArray[1];
-
-                String[] childIdArray = dataArray[2].split(",");
+                List<Integer> childIdList = new ArrayList<Integer>();
                 List<UserChild> childList = new ArrayList<UserChild>();
-                // UserChildTableのSelectByIdを使うための準備
-                // ById() -> ChildTable -> Database必要
-                Database database = new Database(new Path(DatabaseConfig.PROJECT_PATH));
-                database.use();
-                UserChildTable userChildTable = new UserChildTable(database);
 
-                for(String childId : childIdArray) {
-                    childList.add(userChildTable.selectById( new Integer(childId) ));
+                // 子供id(int) 抽出
+                for (int i = 2; i < dataArray.length; i++) {
+                    childIdList.add(new Integer(dataArray[i]));
+                }
+                // 子供idからlistの作成
+                for (int childId : childIdList) {
+                    UserChild userChild = new UserChildTable(db).selectById(childId);
+                    if (userChild != null) {
+                        childList.add(userChild);
+                    }
                 }
 
                 return new User(id, name, childList);
-            }
-            else {
+            } else {
                 return null;
             }
         } catch (Exception e) {

@@ -28,7 +28,6 @@ public abstract class UserTypeTable<T extends UserType> extends Table<T> {
 
     public int deleteByName(String name) {
         List<T> targetList = selectByName(name);
-        if(targetList.size() == 0) return 0;
 
         for(T userType : targetList) {
             if(userType.getName().equals(name)) {
