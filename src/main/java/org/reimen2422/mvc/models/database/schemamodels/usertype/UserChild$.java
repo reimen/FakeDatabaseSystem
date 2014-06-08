@@ -14,6 +14,7 @@ public class UserChild$ implements SchemaModelInterface$<UserChild> {
 
     @Override
     public UserChild serializeModel(String data) {
+//        System.out.println("selialize: " + data);
         try {
             String[] dataArray = data.split(" ");
             if(dataArray.length == 2) {
